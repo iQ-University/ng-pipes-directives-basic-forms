@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+  <div class="form-group">
+    <label for="name">First name:</label>
+    <input class="form-control"
+    name="firstName"
+    [(ngModel)]="model.firstName"
+    #firstName="ngModel" required>
+  </div>
+  <div class="alert alert-danger" [hidden]="contactForm.valid">First name is required</div>
+  <button type="submit">submit!</button>
+</form>
+
+<!-- touched / untouched -->
+<!-- pristine / dirty -->
+<!-- valid / invalid -->
+<!-- https://angular.io/guide/forms#track-control-state-and-validity-with-ngmodel -->

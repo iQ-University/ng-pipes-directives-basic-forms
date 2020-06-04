@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+  <div class="form-group">
+    <label for="name">First name:</label>
+    <input class="form-control"
+    name="name"
+    formControlName="firstName">
+  </div>
+  <!-- <div class="alert alert-danger" [hidden]="firstName.valid">First name is required</div> -->
+  <button type="submit">submit!</button>
+</form>
+
+<!-- touched / untouched -->
+<!-- pristine / dirty -->
+<!-- valid / invalid -->
+{{contactForm.value | json}}
